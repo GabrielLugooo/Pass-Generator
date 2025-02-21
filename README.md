@@ -33,7 +33,7 @@ This tool is particularly useful for enhancing online security by generating com
 4. **Generate the Password** – Using a loop, the program randomly selects characters from the available pool and concatenates them to create the final password.
 5. **Display the Generated Password** – The password is printed for the user.
 
-#### Improved Code with Comments (English & Spanish)
+#### Improved Code with Comments (English)
 
 ```python
 # Import necessary libraries
