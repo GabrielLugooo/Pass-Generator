@@ -1,6 +1,6 @@
 <img align="center" src="https://media.licdn.com/dms/image/v2/D4D16AQGUNxQ7NSC05A/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1738695150340?e=1744243200&v=beta&t=oXX-ixT9bR3dJcYCLv4KBs5wjKFoeP0524kFGHQMYmQ" alt="gabriellugo" />
 
-# SOC (OPEN SOURCE SECURITY OPERATION CENTER)
+# PASS GENERATOR
 
 <a href="https://github.com/GabrielLugooo/Pass-Generator" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/English%20Pass%20Generator-000000" alt="English Generator" /></a>
 <a href="https://github.com/GabrielLugooo/Pass-Generator/blob/main/README%20Spanish.md" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/Spanish%20Pass%20Generator-green" alt="Spanish Generator" /></a>
