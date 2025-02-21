@@ -2,50 +2,73 @@
 
 # SOC (OPEN SOURCE SECURITY OPERATION CENTER)
 
-<a href="https://github.com/GabrielLugooo/SOC-Automation/tree/main" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/English%20SOC-000000" alt="English SOC" /></a>
-<a href="https://github.com/GabrielLugooo/SOC-Automation/blob/main/README%20Spanish.md" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/Spanish%20SOC-green" alt="Spanish SOC" /></a>
+<a href="https://github.com/GabrielLugooo/Pass-Generator" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/English%20Pass%20Generator-000000" alt="English Generator" /></a>
+<a href="https://github.com/GabrielLugooo/Pass-Generator/blob/main/README%20Spanish.md" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/Spanish%20Pass%20Generator-green" alt="Spanish Generator" /></a>
 
 ### Objective
 
+This project, Pass-Generator, is a Python-based password generator designed to create strong and secure passwords with customizable parameters.
+
+Users can define the password length, ensuring a balance between security and usability.
+
+This tool is particularly useful for enhancing online security by generating complex passwords that are difficult to crack.
+
 ### Skills Learned
 
-- Advanced understanding of SOC concepts and practical application.
-- Proficiency in analyzing and interpreting network logs.
-- Ability to generate and recognize attack signatures and patterns.
-- Enhanced knowledge of network protocols and security vulnerabilities.
-- Development of critical thinking and problem-solving skills in cybersecurity.
+- Python programming and working with randomization libraries.
+- Efficient user input handling and customization options.
+- Understanding cybersecurity best practices, especially password strength and encryption principles.
 
 ### Tools Used
 
-![Static Badge](https://img.shields.io/badge/Google%20SecOps-000000?logo=google&logoSize=auto)
-![Static Badge](https://img.shields.io/badge/-000000?logo=splunk&logoSize=auto)
-![Static Badge](https://img.shields.io/badge/TCPDump-000000?logoSize=auto)
-![Static Badge](https://img.shields.io/badge/Wireshark-000000?logo=wireshark&logoSize=auto)
-![Static Badge](https://img.shields.io/badge/Linux-000000?logo=linux&logoSize=auto)
-![Static Badge](https://img.shields.io/badge/SQL-000000?logo=sqlite&logoSize=auto)
 ![Static Badge](https://img.shields.io/badge/Python-000000?logo=python&logoSize=auto)
-
-- Security Information and Event Management (SIEM) systems for log ingestion and analysis.
-- Network analysis tools (TCPDump, Wireshark) for capturing and examining network traffic.
-- Network analysis and algorythms created with code languages (Linux, SQL, Python) for automatization of capturing, examining and analyze network traffic.
-- Telemetry generation tools to create realistic network traffic and attack scenarios.
 
 ### Project
 
-In many organizations,
+#### Step-by-Step Explanation
 
-#### First Step
+1. **Import Necessary Libraries** – The script uses the `string` and `random` libraries to generate secure passwords with different characters.
+2. **User Input Validation** – The program ensures the user inputs a valid number for the password length.
+3. **Define Available Characters** – The script combines uppercase letters, lowercase letters, numbers, and special characters.
+4. **Generate the Password** – Using a loop, the program randomly selects characters from the available pool and concatenates them to create the final password.
+5. **Display the Generated Password** – The password is printed for the user.
 
-For the first part of the
+#### Improved Code with Comments (English & Spanish)
 
-```sh
-# Assign `import_file` to the name of the file
-import_file = "allow_list.txt"
+```python
+# Import necessary libraries
+import string
+import random
+
+def generate_password():
+    """Function to generate a secure password based on user-defined length."""
+    try:
+        # Ask the user for the password length
+        length = int(input("Enter the password length: "))
+
+        # Ensure the password length is at least 4 characters
+        if length < 4:
+            print("Password length should be at least 4 characters for security.")
+            return
+
+        # Define available characters: letters, digits, and punctuation
+        characters = string.ascii_letters + string.digits + string.punctuation
+
+        # Generate the password using random choices and join method
+        password = "".join(random.choice(characters) for _ in range(length))
+
+        # Print the generated password
+        print("The generated password is: " + password)
+    except ValueError:
+        print("Invalid input! Please enter a numeric value.")
+
+# Run the function
+generate_password()
 ```
 
 ### Limitations
 
-SOC Automation Center it's just for educational purpose under the MIT License.
+Pass Generator it's just for educational purpose under the MIT License.
 
 ---
 

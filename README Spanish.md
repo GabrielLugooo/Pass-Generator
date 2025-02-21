@@ -1,51 +1,74 @@
 <img align="center" src="https://media.licdn.com/dms/image/v2/D4D16AQGUNxQ7NSC05A/profile-displaybackgroundimage-shrink_350_1400/profile-displaybackgroundimage-shrink_350_1400/0/1738695150340?e=1744243200&v=beta&t=oXX-ixT9bR3dJcYCLv4KBs5wjKFoeP0524kFGHQMYmQ" alt="gabriellugo" />
 
-# SOC (CENTRO DE OPERACIONES DE SEGURIDAD DE CÓDIGO ABIERTO)
+# GENERADOR DE CONTRASEÑAS
 
-<a href="https://github.com/GabrielLugooo/SOC-Automation/blob/main/README%20Spanish.md" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/SOC%20Español-000000" alt="SOC Español" /></a>
-<a href="https://github.com/GabrielLugooo/SOC-Automation/tree/main" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/SOC%20Inglés-green" alt="SOC Inglés" /></a>
+<a href="https://github.com/GabrielLugooo/Pass-Generator/blob/main/README%20Spanish.md" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/Generador%20Contraseñas%20Español-000000" alt="Generador Español" /></a>
+<a href="https://github.com/GabrielLugooo/Pass-Generator" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/Generador%20Contraseñas%20Inglés-green" alt="Generador Inglés" /></a>
 
 ### Objetivos
 
+Este proyecto, Pass-Generator, es un generador de contraseñas basado en Python diseñado para crear claves seguras y robustas con parámetros personalizables.
+
+Permite a los usuarios definir la longitud de la contraseña y los tipos de caracteres, garantizando un equilibrio entre seguridad y facilidad de uso.
+
+Esta herramienta es especialmente útil para mejorar la seguridad en línea al generar contraseñas complejas y difíciles de descifrar.
+
 ### Habilidades Aprendidas
 
-- Comprensión avanzada de los conceptos de SOC y su aplicación práctica.
-- Competencia en el análisis e interpretación de registros de red.
-- Capacidad para generar y reconocer firmas y patrones de ataques.
-- Mayor conocimiento de los protocolos de red y vulnerabilidades de seguridad.
-- Desarrollo de habilidades de pensamiento crítico y resolución de problemas en ciberseguridad.
+- Programación en Python y uso de bibliotecas de aleatorización.
+- Manejo eficiente de la entrada del usuario y opciones de personalización.
+- Comprensión de buenas prácticas en ciberseguridad, especialmente en la fortaleza de contraseñas y principios de cifrado.
 
 ### Herramientas Usadas
 
-![Static Badge](https://img.shields.io/badge/Google%20SecOps-000000?logo=google&logoSize=auto)
-![Static Badge](https://img.shields.io/badge/-000000?logo=splunk&logoSize=auto)
-![Static Badge](https://img.shields.io/badge/TCPDump-000000?logoSize=auto)
-![Static Badge](https://img.shields.io/badge/Wireshark-000000?logo=wireshark&logoSize=auto)
-![Static Badge](https://img.shields.io/badge/Linux-000000?logo=linux&logoSize=auto)
-![Static Badge](https://img.shields.io/badge/SQL-000000?logo=sqlite&logoSize=auto)
 ![Static Badge](https://img.shields.io/badge/Python-000000?logo=python&logoSize=auto)
-
-- Sistemas de Gestión de Eventos e Información de Seguridad (SIEM) para ingesta y análisis de logs.
-- Herramientas de análisis de red (TCPDump, Wireshark) para captura y examen de tráfico de red.
-- Análisis de red y algoritmos creados con lenguajes de código (Linux, SQL, Python) para la automatización de la captura, examen y análisis de tráfico de red.
-- Herramientas de generación de telemetría para crear escenarios realistas de tráfico de red y ataques.
 
 ### Proyecto
 
-In many organizations,
+#### Explicación Paso a Paso
 
-#### Primer Paso
+1. **Importar las Bibliotecas Necesarias** – El script utiliza las bibliotecas `string` y `random` para generar contraseñas seguras con diferentes caracteres.
+2. **Validación de Entrada del Usuario** – El programa se asegura de que el usuario ingrese un número válido para la longitud de la contraseña.
+3. **Definir los Caracteres Disponibles** – El script combina letras mayúsculas, minúsculas, números y caracteres especiales.
+4. **Generar la Contraseña** – Utilizando un bucle, el programa selecciona aleatoriamente caracteres del conjunto disponible y los concatena para crear la contraseña final.
+5. **Mostrar la Contraseña Generada** – Se imprime la contraseña para el usuario.
 
-For the first part of the
+#### Código con Comentarios (Español)
 
-```sh
-# Assign `import_file` to the name of the file
-import_file = "allow_list.txt"
+```python
+# Importación de librerías necesarias
+import string
+import random
+
+def generar_contrasena():
+    """Función para generar una contraseña segura según la longitud definida por el usuario."""
+    try:
+        # Pedir al usuario la longitud de la contraseña
+        longitud = int(input("Ingrese el tamaño de la contraseña: "))
+
+        # Asegurar que la longitud de la contraseña sea al menos de 4 caracteres
+        if longitud < 4:
+            print("La longitud de la contraseña debe ser de al menos 4 caracteres por seguridad.")
+            return
+
+        # Definir caracteres disponibles: letras, números y signos de puntuación
+        caracteres = string.ascii_letters + string.digits + string.punctuation
+
+        # Generar la contraseña utilizando elecciones aleatorias y el método join
+        contrasena = "".join(random.choice(caracteres) for _ in range(longitud))
+
+        # Imprimir la contraseña generada
+        print("La contraseña generada es: " + contrasena)
+    except ValueError:
+        print("¡Entrada no válida! Por favor, ingrese un valor numérico.")
+
+# Ejecutar la función
+generar_contrasena()
 ```
 
 ### Limitaciones
 
-Centro de Automatización SOC es solo para fines educativos bajo la licencia MIT.
+El Generador de Contraseñas es solo para fines educativos bajo la licencia MIT.
 
 ---
 

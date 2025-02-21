@@ -1,18 +1,29 @@
-# Importación de librerias necesarias
+
+# Importación de librerías necesarias
 import string
 import random
 
-# Preguntamos al usuario por la longitud de la contraseña
-longitud = int(input("Ingrese el tamaño de la contraseña: "))
+def generar_contrasena():
+    """Función para generar una contraseña segura según la longitud definida por el usuario."""
+    try:
+        # Pedir al usuario la longitud de la contraseña
+        longitud = int(input("Ingrese el tamaño de la contraseña: "))
+        
+        # Asegurar que la longitud de la contraseña sea al menos de 4 caracteres
+        if longitud < 4:
+            print("La longitud de la contraseña debe ser de al menos 4 caracteres por seguridad.")
+            return
+        
+        # Definir caracteres disponibles: letras, números y signos de puntuación
+        caracteres = string.ascii_letters + string.digits + string.punctuation
+        
+        # Generar la contraseña utilizando elecciones aleatorias y el método join
+        contrasena = "".join(random.choice(caracteres) for _ in range(longitud))
+        
+        # Imprimir la contraseña generada
+        print("La contraseña generada es: " + contrasena)
+    except ValueError:
+        print("¡Entrada no válida! Por favor, ingrese un valor numérico.")
 
-# Queremos tener a disposición números y letras y signos de puntuación
-# Utilizamos la libreria string
-caracteres = string.ascii_letters + string.digits + string.punctuation
-
-# Usar método join para concatenar caractéres
-# El método choice se encarga de elegir dentro de la variable caractéres alguno de los dígitos aleatoriamente
-# Creamos un bucle for para que se repita la cantidad de veces igual a el tamaño que seleccionó el usuario
-contrasena = "".join(random.choice(caracteres) for i in range(longitud))
-
-# Imprimimos el resultado
-print("la contraseña generada es: " + contrasena)
+# Ejecutar la función
+generar_contrasena()
