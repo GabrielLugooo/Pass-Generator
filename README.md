@@ -36,6 +36,7 @@ This tool is particularly useful for enhancing online security by generating com
 #### Improved Code with Comments (English)
 
 ```python
+# Pass-Generator
 # Import necessary libraries
 import string
 import random
@@ -92,4 +93,4 @@ Pass Generator it's just for educational purpose under the MIT License.
 
 <a href="https://linktr.ee/gabriellugooo" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/Credits-Gabriel%20Lugo-green" alt="Credits" /></a>
 <img align="center" src="https://komarev.com/ghpvc/?username=GabrielLugoo&label=Profile%20views&color=green&base=2000" alt="GabrielLugooo" />
-<a href="" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/License-MIT-green" alt="Last Edited" /></a>
+<a href="" target="_blank" rel="noreferrer noopener"> <img align="center" src="https://img.shields.io/badge/License-MIT-green" alt="MIT License" /></a>
