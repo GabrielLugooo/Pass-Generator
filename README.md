@@ -23,6 +23,8 @@ This tool is particularly useful for enhancing online security by generating com
 
 ![Static Badge](https://img.shields.io/badge/Python-000000?logo=python&logoSize=auto)
 
+- Python
+
 ### Project
 
 #### Step-by-Step Explanation

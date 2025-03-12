@@ -23,6 +23,8 @@ Esta herramienta es especialmente útil para mejorar la seguridad en línea al g
 
 ![Static Badge](https://img.shields.io/badge/Python-000000?logo=python&logoSize=auto)
 
+- Python
+
 ### Proyecto
 
 #### Explicación Paso a Paso
